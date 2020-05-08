@@ -1,0 +1,88 @@
+@font-face {
+    font-family: 'IntroBookAlt';
+    src: url('./fonts/IntroBookAlt/IntroBookAltRegular.otf');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+//--------------------------------------------COLORS------------------------------------
+@colorGreenUltra: rgb(11, 238, 68);
+@colorGreen: rgb(28, 173, 36);
+@colorGreenLigth: rgb(118, 202, 123);
+@color_transparentDark: rgba(10, 10, 10, 0.2);
+@color_transparentLigth: rgba(59, 59, 59, 0.2);
+//--------------------------------------------ANT------------------------------------
+@import '~antd/dist/antd.css';
+.ant-btn-primary {
+  color: #fff;
+  background-color: @colorGreen;
+  border-color: @colorGreen;
+  &:hover{
+    background-color: @colorGreenLigth;
+    border-color: @colorGreenLigth;
+  }
+}
+//--------------------------------------------TEMA------------------------------------
+body {
+
+  background: rgba(23,69,48,1);
+  background: -moz-linear-gradient(left, rgba(23,69,48,1) 0%, rgba(0,10,13,1) 49%, rgba(42,82,64,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(23,69,48,1)), color-stop(49%, rgba(0,10,13,1)), color-stop(100%, rgba(42,82,64,1)));
+  background: -webkit-linear-gradient(left, rgba(23,69,48,1) 0%, rgba(0,10,13,1) 49%, rgba(42,82,64,1) 100%);
+  background: -o-linear-gradient(left, rgba(23,69,48,1) 0%, rgba(0,10,13,1) 49%, rgba(42,82,64,1) 100%);
+  background: -ms-linear-gradient(left, rgba(23,69,48,1) 0%, rgba(0,10,13,1) 49%, rgba(42,82,64,1) 100%);
+  background: linear-gradient(to right, rgba(23,69,48,1) 0%, rgba(0,10,13,1) 49%, rgba(42,82,64,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#174530', endColorstr='#2a5240', GradientType=1 );
+  
+    font-family: 'IntroBookAlt','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.center-block{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+//--------------------------------------------APP------------------------------------
+.app-container{
+  width: 90%;
+  margin: 50px auto 50px auto;
+  button{
+    margin-bottom: 25px;
+  }
+}
+.loading-screen{
+  padding-top: 140px;
+  color: #fff;
+  text-align: center;
+  h1{
+    color: @colorGreenUltra;
+    font-size: 40px;
+  }
+  svg{
+    font-size: 45px;
+  }
+}
+//--------------------------------------------Form------------------------------------
+.form-card{
+  border: 4px solid @colorGreenUltra;
+  position: absolute;
+  margin: 0px auto 0px auto;
+  top: 50px;
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  text-align: center;
+  z-index: 3;
+}
+.close-transparent{
+  z-index: 1;
+  background-color: @color_transparentDark;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  &:hover {
+    background-color: @color_transparentLigth;
+    cursor: pointer;
+  }
+}
